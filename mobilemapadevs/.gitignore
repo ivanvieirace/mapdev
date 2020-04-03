@@ -1,0 +1,28 @@
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# dependencies
+/node_modules
+
+# production
+/build
+
+# expo
+.expo
+__generated__
+web-build
+
+# yarn
+.pnp/
+.pnp.js
+
+# misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
