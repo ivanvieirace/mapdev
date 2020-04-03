@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": "Ivan Vieira <ivanjr.ce@gmail.com>",
   "scripts": {
     "dev": "nodemon src/index.js"
   },
