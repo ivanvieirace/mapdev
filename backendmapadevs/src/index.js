@@ -12,4 +12,6 @@ mongoose.connect(
 
 server.use(express.json());
 server.use(routes);
+
+// Subindo o Servidor e escutando na Porta 3333
 server.listen(3333);

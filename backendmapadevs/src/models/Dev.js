@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import PointSchema from "./utils/PointSchema";
 
+// ORM com Banco MongoDB usando Mongoose
 const DevSchema = new mongoose.Schema({
   name: String,
   github_username: String,
@@ -9,8 +10,8 @@ const DevSchema = new mongoose.Schema({
   techs: [String],
   location: {
     type: PointSchema,
-    index: '2dsphere'
-  }
+    index: "2dsphere",
+  },
 });
 
 module.exports = mongoose.model("Dev", DevSchema);

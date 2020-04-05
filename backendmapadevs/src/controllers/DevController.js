@@ -5,12 +5,14 @@ import parseStringAsArray from "../utils/parseStringAsArray";
 // index, show, store, update, destroy
 
 module.exports = {
+  // Rota de Consulta Geral de todos os Desenvolvedores
   async index(request, response) {
     const developer = await Dev.find();
 
     return response.json(developer);
   },
 
+  // Rota de Cadastro de Novos Desenvolvedores
   async store(request, response) {
     const { github_username, techs, latitude, longitude } = request.body;
 
