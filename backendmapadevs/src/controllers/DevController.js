@@ -1,6 +1,7 @@
 import axios from "axios";
 import Dev from "../models/Dev";
 import parseStringAsArray from "../utils/parseStringAsArray";
+import { response } from "express";
 
 // index, show, store, update, destroy
 
@@ -43,5 +44,24 @@ module.exports = {
     }
 
     return response.json(developer);
+  },
+
+  // Rota Atualização de Registro Desenvolvedor
+  async update(request, response) {
+    const developerUpdate = await Dev.findOneAndUpdate(
+      request.params.github_username,
+      request.body,
+      {
+        new: true,
+      }
+    );
+
+    return response.json(developerUpdate);
+  },
+
+  async destroy(request, response) {
+    await Dev.findByIdAndRemove(request.params.id);
+
+    return response.send();
   },
 };
